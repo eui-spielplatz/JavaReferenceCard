@@ -1,6 +1,7 @@
 \documentclass[11pt, a4paper, landscape]{article}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
 \usepackage{listings}
 \usepackage{a4wide}
@@ -10,18 +11,21 @@
 \usepackage{color}
 \usepackage{xcolor}
 \usepackage{adjustbox}
-\usepackage[margin=1.8cm]{geometry}
+\usepackage{lmodern}
+\usepackage[margin=1.8cm, lmargin=0.8cm, rmargin=0.8cm, bmargin=1.5cm]{geometry}
 \usepackage{struktex}
 
 \definecolor{pageyellow}{HTML}{fffff0}
 \definecolor{pagegreen}{HTML}{f0fff0}
 \definecolor{pageblue}{HTML}{f0f0ff}
 \definecolor{pagegray}{HTML}{f0f0f0}
+\definecolor{pagered}{HTML}{fff0f0}
 
 \definecolor{borderyellow}{HTML}{c0c080}
 \definecolor{bordergreen}{HTML}{80c080}
 \definecolor{borderblue}{HTML}{8080c0}
 \definecolor{bordergray}{HTML}{808080}
+\definecolor{borderred}{HTML}{c08080}
 
 \setlength{\fboxrule}{0.5mm}
 
@@ -53,12 +57,12 @@
 	stringstyle=\color{Thistle},
 	tabsize=2,
 	firstnumber=1,
-	texcl=true
+	texcl=true,
+	basicstyle=\scriptsize\ttfamily
 }
 
 \newcommand{\fancyheader}[1]{
 	\centerline{\sffamily \textbf{ \large #1}}
-	%\subsection*{#1}
 }
 
 \newenvironment{fancybox}[2]
@@ -73,22 +77,29 @@
 
 \begin{document}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{multicols}{3}
 \raggedcolumns
 
-\begin{fancybox}{pagegreen}{bordergreen}
-\fancyheader{Hier steht was}
-some text again
-\end{fancybox}
-
-
-\begin{fancybox}{pagegreen}{bordergreen}
-\fancyheader{Some code}
-\lstinputlisting{Node.java}
+\begin{fancybox}{pagered}{borderred}
+\fancyheader{Object}
+\lstinputlisting{Object.java}
 \end{fancybox}
 
 \begin{fancybox}{pageyellow}{borderyellow}
-	Yellow!
+\fancyheader{Iterable}
+\lstinputlisting{Iterable.java}
+\end{fancybox}
+
+\begin{fancybox}{pageyellow}{borderyellow}
+\fancyheader{Iterator}
+\lstinputlisting{Iterator.java}
+\end{fancybox}
+
+\begin{fancybox}{pagegreen}{bordergreen}
+\fancyheader{String}
+\lstinputlisting{String.java}
 \end{fancybox}
 
 \begin{fancybox}{pageblue}{borderblue}
