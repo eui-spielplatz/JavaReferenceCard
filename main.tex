@@ -1,0 +1,135 @@
+\documentclass[11pt, a4paper, landscape]{article}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{a4wide}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{struktex}
+
+\definecolor{pageyellow}{HTML}{fffff0}
+\definecolor{pagegreen}{HTML}{f0fff0}
+\definecolor{pageblue}{HTML}{f0f0ff}
+\definecolor{pagegray}{HTML}{f0f0f0}
+
+\definecolor{borderyellow}{HTML}{c0c080}
+\definecolor{bordergreen}{HTML}{80c080}
+\definecolor{borderblue}{HTML}{8080c0}
+\definecolor{bordergray}{HTML}{808080}
+
+\setlength{\fboxrule}{0.5mm}
+
+\pagestyle{fancy}
+\lhead{Java Reference Card}
+\chead{SS 2016}
+\rhead{Informatik I, Teil 1 + 2}
+\pagenumbering{gobble}
+
+\lstset{
+	basicstyle=\footnotesize,
+	breaklines=true,
+	captionpos=t,
+	extendedchars=true,
+	frame=none,
+	keepspaces=true,
+	keywordstyle=\color{BrickRed},
+	commentstyle=\color{Blue},
+	identifierstyle=\color{Black},
+	language=Java,
+	numbers=none,
+	numbersep=5pt,
+	numberstyle=\color{black},
+	rulecolor=\color{black},
+	showstringspaces=false,
+	showspaces=false,
+	showtabs=false,
+	stepnumber=5,
+	stringstyle=\color{Thistle},
+	tabsize=2,
+	firstnumber=1,
+	texcl=true
+}
+
+\newcommand{\fancyheader}[1]{
+	\centerline{\sffamily \textbf{ \large #1}}
+	%\subsection*{#1}
+}
+
+\newenvironment{fancybox}[2]
+{
+	\begin{adjustbox}{valign=m,center=0.31\textwidth,margin=1ex,minipage=[t][][t]{0.31\textwidth},bgcolor=#1,cfbox=#2 1.5pt 0pt 1pt}
+	\begin{centering}
+}
+{
+	\end{centering}
+	\end{adjustbox}
+}
+
+\begin{document}
+
+\begin{multicols}{3}
+\raggedcolumns
+
+\begin{fancybox}{pagegreen}{bordergreen}
+\fancyheader{Hier steht was}
+some text again
+\end{fancybox}
+
+
+\begin{fancybox}{pagegreen}{bordergreen}
+\fancyheader{Some code}
+\lstinputlisting{Node.java}
+\end{fancybox}
+
+\begin{fancybox}{pageyellow}{borderyellow}
+	Yellow!
+\end{fancybox}
+
+\begin{fancybox}{pageblue}{borderblue}
+	Blue!
+\end{fancybox}
+
+
+\begin{fancybox}{pagegray}{bordergray}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\end{fancybox}
+
+\begin{fancybox}{pagegreen}{bordergreen}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\end{fancybox}
+
+\begin{fancybox}{pagegreen}{bordergreen}
+Some random code:
+\lstinputlisting{Node.java}
+\end{fancybox}
+
+\begin{fancybox}{pagegreen}{bordergreen}
+	First minipage
+\end{fancybox}
+
+\begin{fancybox}{pagegreen}{bordergreen}
+\fancyheader{Struktogramm}
+
+\begin{struktogramm}(70,60)
+	\ifthenelse{2}{1}{Bedingung 1}{ja}{nein}
+		\ifthenelse{1}{1}{Bedingung 2}{ja}{nein}
+			\assign{Tu nix}
+			\change
+			\assign{Tu das}
+		\ifend
+		\change
+		\assign{Tu dies}
+	\ifend
+\end{struktogramm}
+
+\end{fancybox}
+
+
+\end{multicols}
+\end{document}
