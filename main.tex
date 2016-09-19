@@ -103,8 +103,20 @@
 \end{fancybox}
 
 \begin{fancybox}{pageblue}{borderblue}
+\fancyheader{Comparable}
+Definiert Totalordnung implementierende Objekte\lstinputlisting{Comparable.java}
+\end{fancybox}
+
+\begin{fancybox}{pageblue}{borderblue}
 \fancyheader{Set}
 \lstinputlisting{Set.java}
+
+Interface, welches Collection erfüllt; beachte:
+\begin{itemize}
+\item Ein Set enthält keine zwei Elemente e1 und e2, sodass e1.equals(e2)
+\item Ein Set darf sich nicht selbst enthalten
+\item Objekte im Set sollten nicht modifiziert werden, sodass nachträglich e1.equals(e2) gilt, sonst undefined behaviour.
+\end{itemize}
 \end{fancybox}
 
 \begin{fancybox}{pagegreen}{bordergreen}

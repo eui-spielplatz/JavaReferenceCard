@@ -1,7 +1,8 @@
 // CharSequence ist ein Interface, wird
 // von String, CharBuffer, ... implementiert
 
-public class String implements CharSequence {
+public class String implements CharSequence,
+		Comparable<String> {
 	// Erzeugt leeren String ""
 	public String();
 
@@ -42,4 +43,9 @@ public class String implements CharSequence {
 	public int lastIndexOf(String str);
 	public int hashCode();
 	public int length();
+
+	// Implementiert Comparable mit lexikalischer
+	// Reihenfolge (Unicode / Länge), return value
+	// > 0, falls other früher im Alphabet
+	public int compareTo(String other);
 }
