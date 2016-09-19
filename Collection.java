@@ -1,8 +1,11 @@
 public interface Collection<E>
 		extends Iterable<E> {
+	// True, falls sich die Collection durch
+	// add / addAll verändert hat
 	public boolean add(E e);
 	public boolean addAll
 			(Collection<? extends E> c);
+
 	public void clear();
 	public boolean contains(Object o);
 	public boolean containsAll(Collection<?> c);

@@ -10,6 +10,7 @@
 \usepackage{multicol}
 \usepackage{color}
 \usepackage{xcolor}
+\usepackage{underscore}
 \usepackage{adjustbox}
 \usepackage{lmodern}
 \usepackage[margin=1.8cm, lmargin=0.8cm, rmargin=0.8cm, bmargin=1.5cm]{geometry}
@@ -104,7 +105,15 @@
 
 \begin{fancybox}{pageblue}{borderblue}
 \fancyheader{Comparable}
-Definiert Totalordnung implementierende Objekte\lstinputlisting{Comparable.java}
+\raggedright{
+Definiert Totalordnung auf implementierende Objekte.
+}
+\lstinputlisting{Comparable.java}
+\end{fancybox}
+
+\begin{fancybox}{pageblue}{borderblue}
+\fancyheader{Comparator}
+\lstinputlisting{Comparator.java}
 \end{fancybox}
 
 \begin{fancybox}{pageblue}{borderblue}
@@ -117,6 +126,15 @@ Interface, welches Collection erfüllt; beachte:
 \item Ein Set darf sich nicht selbst enthalten
 \item Objekte im Set sollten nicht modifiziert werden, sodass nachträglich e1.equals(e2) gilt, sonst undefined behaviour.
 \end{itemize}
+\end{fancybox}
+
+\begin{fancybox}{pageblue}{borderblue}
+\fancyheader{SortedSet}
+\lstinputlisting{SortedSet.java}
+
+\raggedright{
+	Die Iteration erfolgt in \emph{aufsteigender} Reihenfolge. Nur interface!
+}
 \end{fancybox}
 
 \begin{fancybox}{pagegreen}{bordergreen}
