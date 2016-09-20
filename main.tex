@@ -21,12 +21,14 @@
 \definecolor{pageblue}{HTML}{F0F0FF}
 \definecolor{pagegray}{HTML}{F0F0F0}
 \definecolor{pagered}{HTML}{FFF0F0}
+\definecolor{pageorange}{HTML}{FFF8F0}
 
 \definecolor{borderyellow}{HTML}{C0C080}
 \definecolor{bordergreen}{HTML}{80C080}
 \definecolor{borderblue}{HTML}{8080C0}
 \definecolor{bordergray}{HTML}{808080}
 \definecolor{borderred}{HTML}{C08080}
+\definecolor{borderorange}{HTML}{C0A080}
 
 \setlength{\fboxrule}{0.5mm}
 
@@ -99,11 +101,6 @@
 \end{fancybox}
 
 \begin{fancybox}{pageyellow}{borderyellow}
-\fancyheader{Collection}
-\lstinputlisting{Collection.java}
-\end{fancybox}
-
-\begin{fancybox}{pageblue}{borderblue}
 \fancyheader{Comparable}
 \raggedright{
 Definiert Totalordnung auf implementierende Objekte.
@@ -111,9 +108,14 @@ Definiert Totalordnung auf implementierende Objekte.
 \lstinputlisting{Comparable.java}
 \end{fancybox}
 
-\begin{fancybox}{pageblue}{borderblue}
+\begin{fancybox}{pageyellow}{borderyellow}
 \fancyheader{Comparator}
 \lstinputlisting{Comparator.java}
+\end{fancybox}
+
+\begin{fancybox}{pageyellow}{borderyellow}
+\fancyheader{Collection}
+\lstinputlisting{Collection.java}
 \end{fancybox}
 
 \begin{fancybox}{pageblue}{borderblue}
@@ -161,6 +163,14 @@ Interface, welches Collection erfüllt; beachte:
 \end{fancybox}
 
 \begin{fancybox}{pagegray}{bordergray}
+\fancyheader{ArrayList}
+\lstinputlisting{ArrayList.java}
+\raggedright{
+	Im Gegensatz zur LinkedList garantiert ArrayList schnellen Zugriff auf beliebige Indizes.
+}
+\end{fancybox}
+
+\begin{fancybox}{pagegray}{bordergray}
 \fancyheader{Deque}
 \lstinputlisting{Deque.java}
 \end{fancybox}
@@ -170,12 +180,9 @@ Interface, welches Collection erfüllt; beachte:
 \lstinputlisting{LinkedList.java}
 \end{fancybox}
 
-\begin{fancybox}{pagegray}{bordergray}
-\fancyheader{ArrayList}
-\lstinputlisting{ArrayList.java}
-\raggedright{
-	Im Gegensatz zur LinkedList garantiert ArrayList schnellen Zugriff auf beliebige Indizes.
-}
+\begin{fancybox}{pageorange}{borderorange}
+\fancyheader{Map}
+\lstinputlisting{Map.java}
 \end{fancybox}
 
 \begin{fancybox}{pagegreen}{bordergreen}
