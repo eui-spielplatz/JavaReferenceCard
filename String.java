@@ -1,12 +1,8 @@
-// CharSequence ist ein Interface, wird
-// von String, CharBuffer, ... implementiert
+// CharSequence ist Interface, wird String implementiert!
 
 public class String implements CharSequence,
 		Comparable<String> {
-	// Erzeugt leeren String ""
-	public String();
-
-	// Erzeugt String aus bytes
+	public String(); // leerer String ""
 	public String(byte[] bytes);
 	public String(char[] value);
 
@@ -28,14 +24,16 @@ public class String implements CharSequence,
 	public String toUpperCase();
 
 	// "qbc".substring(2, 3) --> "c"
-	public String substring
-			(int beginIndex, int endIndex);
+	public String substring(int begin, int end);
 
 	// "Harbison".substring(3) --> "bison"
 	public String substring (int beginIndex);
 
 	// Whitespace am Anfang / Ende entfernen
 	public String trim();
+
+	// String an regex (bzw. einfach String) trennen
+	public String[] split();
 
 	// Index des ersten Auftretens von str
 	// (last... letztes Auftreten)
@@ -48,4 +46,8 @@ public class String implements CharSequence,
 	// Reihenfolge (Unicode / Länge), return value
 	// > 0, falls other früher im Alphabet
 	public int compareTo(String other);
+
+	// String-Darstellung der Werte. b kann sein:
+	// boolean, char, double, float, int, long, Object
+	public static String valueOf(b);
 }
