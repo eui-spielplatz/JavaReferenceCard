@@ -24,16 +24,15 @@ public class String implements CharSequence,
 	public String toUpperCase();
 
 	// "qbc".substring(2, 3) --> "c"
-	public String substring(int begin, int end);
-
 	// "Harbison".substring(3) --> "bison"
+	public String substring(int begin, int end);
 	public String substring (int beginIndex);
 
 	// Whitespace am Anfang / Ende entfernen
 	public String trim();
 
 	// String an regex (bzw. einfach String) trennen
-	public String[] split();
+	public String[] split(String regex);
 
 	// Index des ersten Auftretens von str
 	// (last... letztes Auftreten)

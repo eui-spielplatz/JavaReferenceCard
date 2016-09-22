@@ -93,6 +93,11 @@
 \end{fancybox}
 
 \begin{fancybox}{pageyellow}{borderyellow}
+\fancyheader{Collection}
+\lstinputlisting{Collection.java}
+\end{fancybox}
+
+\begin{fancybox}{pageyellow}{borderyellow}
 \fancyheader{Iterator}
 \lstinputlisting{Iterator.java}
 \end{fancybox}
@@ -108,11 +113,6 @@ Definiert Totalordnung auf implementierende Objekte.
 \begin{fancybox}{pageyellow}{borderyellow}
 \fancyheader{Comparator}
 \lstinputlisting{Comparator.java}
-\end{fancybox}
-
-\begin{fancybox}{pageyellow}{borderyellow}
-\fancyheader{Collection}
-\lstinputlisting{Collection.java}
 \end{fancybox}
 
 \begin{fancybox}{pageblue}{borderblue}
@@ -245,7 +245,19 @@ Attribute und statische Attribute werden von Java auf vorgegebenen Standardwerte
 	Die Wrapper-Klassen {\ttfamily Byte}, {\ttfamily Short}, {\ttfamily Integer}, {\ttfamily Long} enthalten die statischen Konstanten {\ttfamily MAX_VALUE} und {\ttfamily MIN_VALUE}. Die Konstruktoren aller Wrapperklassen akzeptieren auch einen String! \newline
 	{\ttfamily Float} / {\ttfamily Double} enthalten beide die statischen Konstanten {\ttfamily NEGATIVE_INFINITY} und {\ttfamily POSITIVE_INFINITY}.
 }
+\end{fancybox}
 
+\begin{fancybox}{pagered}{borderred}
+\fancyheader{Arrays}
+\raggedright {
+	Arrays haben ein Konstantes {\ttfamily .length}-Attribut, sind aber keine Klasse. Die Klasse {\ttfamily Arrays} enthält einige statische Array-Hilfsfunktionen:
+}
+\lstinputlisting{Arrays.java}
+\end{fancybox}
+
+\begin{fancybox}{pagered}{borderred}
+\fancyheader{Reservierte Schlüsselwörter}
+{\ttfamily abstract, assert, boolean, break, byte, case, catch, char, class, const, continue, default, do, double, else, enum, extends, false, final, finally, float, for, goto, if, implements, import, instanceof, int, interface, long, native, new, null, package, private, protected, public, return, short, static, strictfp, super, switch, synchronized, this, throw, throws, transient, true, try, void, volatile, while}
 \end{fancybox}
 
 \begin{fancybox}{pagepurple}{borderpurple}
