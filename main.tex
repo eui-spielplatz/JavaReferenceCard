@@ -87,11 +87,6 @@
 \begin{multicols}{3}
 \raggedcolumns
 
-\begin{fancybox}{pagered}{borderred}
-\fancyheader{Object}
-\lstinputlisting{Object.java}
-\end{fancybox}
-
 \begin{fancybox}{pageyellow}{borderyellow}
 \fancyheader{Iterable}
 \lstinputlisting{Iterable.java}
@@ -215,6 +210,42 @@ Interface, welches Collection erfüllt; beachte:
 \begin{fancybox}{pagegreen}{bordergreen}
 \fancyheader{String}
 \lstinputlisting{String.java}
+\end{fancybox}
+
+\begin{fancybox}{pagered}{borderred}
+\fancyheader{Object}
+\lstinputlisting{Object.java}
+\end{fancybox}
+
+\begin{fancybox}{pagered}{borderred}
+\fancyheader{Datentypen}
+\raggedright {
+Attribute und statische Attribute werden von Java auf vorgegebenen Standardwerte initialisiert. Bei lokalen Variablen geschieht dies nicht!
+}
+
+\vspace{3mm}
+
+\centering{
+\begin{tabular}{r | c | c | c | l}
+	\textbf{Type} & \textbf{Min} & \textbf{Max} & \textbf{Init} & \textbf{Wrapper} \\ \hline
+	{\ttfamily byte} & -128 & 127 & 0 & {\ttfamily Byte} \\
+	{\ttfamily short} & $-2^{15}$ & $2^{15}-1$ & 0 & {\ttfamily Short} \\
+	{\ttfamily int} & $-2^{31}$ & $2^{31}-1$ & 0 & {\ttfamily Integer} \\
+	{\ttfamily long} & $-2^{63}$ & $2^{63}-1$ & 0L & {\ttfamily Long} \\
+	{\ttfamily float} & $-\infty$ & $\infty$ & 0.0f & {\ttfamily Float} \\
+	{\ttfamily double} & $-\infty$ & $\infty$ & 0.0d & {\ttfamily Double} \\
+	{\ttfamily boolean} & - & - & false & {\ttfamily Boolean} \\
+	{\ttfamily String} & - & - & null & - \\
+	{\ttfamily Object} & - & - & null & - \\
+\end{tabular}
+}
+
+\vspace{3mm}
+\raggedright {
+	Die Wrapper-Klassen {\ttfamily Byte}, {\ttfamily Short}, {\ttfamily Integer}, {\ttfamily Long} enthalten die statischen Konstanten {\ttfamily MAX_VALUE} und {\ttfamily MIN_VALUE}. Die Konstruktoren aller Wrapperklassen akzeptieren auch einen String! \newline
+	{\ttfamily Float} / {\ttfamily Double} enthalten beide die statischen Konstanten {\ttfamily NEGATIVE_INFINITY} und {\ttfamily POSITIVE_INFINITY}.
+}
+
 \end{fancybox}
 
 \begin{fancybox}{pagepurple}{borderpurple}
