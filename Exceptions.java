@@ -1,18 +1,20 @@
+// Alles was beim Ausführen so schief geht
+public class RuntimeException
+		extends Exception;
 
-public class Exceptions {
+// Beispiel: Durch 0 teilen
+public class ArithmeticException
+		extends RuntimeException;
 
-	ArithmeticException e01;
-	//Beispiel: Durch 0 teilen (extends RuntimeException)
-	
-	ArrayIndexOutOfBoundsException e02;
-	//Lesen/Schreiben von Elementen, deren Index nicht im Array ist
-	//Auch:
-	IndexOutOfBoundsException e03;
-	StringIndexOutOfBoundsException e04;
-	
-	NullPointerException e05;
-	//Unerwartete Verwendung eines null-Werts (extends Runtime-Exception)
-	
-	RuntimeException e;
-	//Alles was beim Ausführen so schief geht
-}
+// Lesen / Schreiben von Elementen, deren
+// Index nicht im Array / String ist
+public class IndexOutOfBoundsException
+		extends RuntimeException;
+public class ArrayIndexOutOfBoundsException
+		extends IndexOutOfBoundsException;
+public class StringIndexOutOfBoundsException
+		extends IndexOutOfBoundsException;
+
+// Unerwartete Verwendung eines null-Werts
+public class NullPointerException
+		extends RuntimeException;

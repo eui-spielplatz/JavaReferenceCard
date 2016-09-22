@@ -279,6 +279,80 @@ Attribute und statische Attribute werden von Java auf vorgegebenen Standardwerte
 \lstinputlisting{Math.java}
 \end{fancybox}
 
+\begin{fancybox}{white}{bordergreen}
+\fancyheader{Struktogramm: while}
+\vspace{10pt}
+\begin{center}
+\begin{struktogramm}(60,20)
+	\while[1]{Solange Bedingung}
+		\assign{Anweisung1}
+		\assign{Anweisung2}
+	\whileend
+\end{struktogramm}
+\end{center}
+\end{fancybox}
+
+\begin{fancybox}{white}{bordergreen}
+\fancyheader{Struktogramm: do-while}
+\vspace{10pt}
+\begin{center}
+\begin{struktogramm}(60,20)
+	\until[2]{Solange Bedingung}
+		\assign{Anweisung1}
+		\assign{Anweisung2}
+	\untilend
+\end{struktogramm}
+\end{center}
+\end{fancybox}
+
+\begin{fancybox}{white}{bordergreen}
+\fancyheader{Struktogramm: for}
+\vspace{10pt}
+\begin{center}
+\begin{struktogramm}(60,20)
+	\while[1]{Für x von a bis b}
+		\assign{Anweisung1}
+		\assign{Anweisung2}
+	\whileend
+\end{struktogramm}
+\end{center}
+\end{fancybox}
+
+\begin{fancybox}{white}{bordergreen}
+\fancyheader{Struktogramm: if}
+\vspace{10pt}
+\begin{center}
+\begin{struktogramm}(60,25)
+	\ifthenelse{2}{2}{Bedingung}{ja}{nein}
+		\assign{Tu dies}
+		\change
+		\assign{Tu das}
+	\ifend
+\end{struktogramm}
+\end{center}
+\end{fancybox}
+
+\begin{fancybox}{white}{bordergreen}
+\fancyheader{Struktogramm: Äußere Merkmale}
+\vspace{10pt}
+\raggedright {\ttfamily SomeClass.someMethod()}
+\begin{center}
+\begin{struktogramm}(60,29)
+	\while[4]{Solange Bedingung1}
+		\assign{Anweisung}
+		\ifthenelse{2}{2}{Bedingung2}{ja}{nein}
+			\assign{Tu dies}
+			\change
+			\assign{Tu das}
+		\ifend
+	\whileend
+\end{struktogramm}
+\end{center}
+\raggedright {\ttfamily Parameter: String param1, Integer param2} \newline
+
+Im Struktogramm sollen keine Java-Befehle stehen, sondern Allgemeine Beschreibungen. Für Parameter und Attribute können auch Buchstaben als Abkürzungen angegeben werden.
+\end{fancybox}
+
 \begin{fancybox}{pagepurple}{borderpurple}
 \fancyheader{Wichtige Exceptions}
 \lstinputlisting{Exceptions.java}
@@ -287,29 +361,16 @@ Attribute und statische Attribute werden von Java auf vorgegebenen Standardwerte
 \begin{fancybox}{pagepurple}{borderpurple}
 \fancyheader{Eigene Exception}
 \lstinputlisting{CustomException.java}
-----------------------------------------------
+\noindent\rule{8cm}{0.6pt}
+
+\raggedright {
+	{\ttfamily throws} sollte dann angegeben werden, wenn eine Methode eine Exception nicht selbst behandelt, sondern sie "nach oben" weiterleitet. Wenn throws spezifiziert wird, muss der Methodenaufruf mit try-catch abgesichert werden. {\ttfamily throws} muss aber nicht angegeben werden.
+}
 \lstinputlisting{ExceptionMain.java}
 \end{fancybox}
 
-\begin{fancybox}{pagegreen}{bordergreen}
-\fancyheader{Struktogramm}
-
-\begin{struktogramm}(70,60)
-	\ifthenelse{2}{1}{Bedingung 1}{ja}{nein}
-		\ifthenelse{1}{1}{Bedingung 2}{ja}{nein}
-			\assign{Tu nix}
-			\change
-			\assign{Tu das}
-		\ifend
-		\change
-		\assign{Tu dies}
-	\ifend
-\end{struktogramm}
-\end{fancybox}
-
-\end{multicols}
-
 \newpage
+\end{multicols}
 
 \begin{fancyboxwide}{white}{bordergray}
 \fancyheader{Algorithmus: Bubblesort}
