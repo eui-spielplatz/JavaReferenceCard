@@ -15,6 +15,7 @@
 \usepackage{lmodern}
 \usepackage[margin=1.8cm, lmargin=0.8cm, rmargin=0.8cm, bmargin=1.5cm]{geometry}
 \usepackage{struktex}
+\usepackage{lastpage}
 
 \definecolor{pageyellow}{HTML}{FFFFF0}
 \definecolor{pagegreen}{HTML}{F0FFF0}
@@ -23,6 +24,7 @@
 \definecolor{pagered}{HTML}{FFF0F0}
 \definecolor{pageorange}{HTML}{FFF8F0}
 \definecolor{pagepurple}{HTML}{FFF0F8}
+\definecolor{pagecyan}{HTML}{F0FFFF}
 
 \definecolor{borderyellow}{HTML}{C0C080}
 \definecolor{bordergreen}{HTML}{80C080}
@@ -31,14 +33,16 @@
 \definecolor{borderred}{HTML}{C08080}
 \definecolor{borderorange}{HTML}{C0A080}
 \definecolor{borderpurple}{HTML}{C080A0}
+\definecolor{bordercyan}{HTML}{80C0C0}
 
 \setlength{\fboxrule}{0.5mm}
 
 \pagestyle{fancy}
+\fancyhf{}
 \lhead{Java Reference Card}
-\chead{SS 2016}
+\chead{Seite \thepage\ / \pageref{LastPage}}
 \rhead{Informatik I, Teil 1 + 2}
-\pagenumbering{gobble}
+\pagenumbering{arabic}
 
 \lstset{
 	basicstyle=\footnotesize,
@@ -258,6 +262,11 @@ Attribute und statische Attribute werden von Java auf vorgegebenen Standardwerte
 \begin{fancybox}{pagered}{borderred}
 \fancyheader{Reservierte Schlüsselwörter}
 {\ttfamily abstract, assert, boolean, break, byte, case, catch, char, class, const, continue, default, do, double, else, enum, extends, false, final, finally, float, for, goto, if, implements, import, instanceof, int, interface, long, native, new, null, package, private, protected, public, return, short, static, strictfp, super, switch, synchronized, this, throw, throws, transient, true, try, void, volatile, while}
+\end{fancybox}
+
+\begin{fancybox}{pagecyan}{bordercyan}
+\fancyheader{Math}
+\lstinputlisting{Math.java}
 \end{fancybox}
 
 \begin{fancybox}{pagepurple}{borderpurple}

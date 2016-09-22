@@ -1,14 +1,11 @@
-// CharSequence ist Interface, wird String implementiert!
+// CharSequence ist Interface, das String implementiert!
 
 public class String implements CharSequence,
 		Comparable<String> {
 	public String(); // leerer String ""
 	public String(byte[] bytes);
 	public String(char[] value);
-
-	// Aus String / StringBuffer
 	public String(String original);
-	public String(StringBuffer buffer);
 
 	public char charAt(int index);
 	public char[] toCharArray();
@@ -34,16 +31,15 @@ public class String implements CharSequence,
 	// String an regex (bzw. einfach String) trennen
 	public String[] split(String regex);
 
-	// Index des ersten Auftretens von str
-	// (last... letztes Auftreten)
+	// Index des ersten / letzten Auftretens von str
 	public int indexOf(String str);
 	public int lastIndexOf(String str);
 	public int hashCode();
 	public int length();
 
-	// Implementiert Comparable mit lexikalischer
-	// Reihenfolge (Unicode / Länge), return value
-	// > 0, falls other früher im Alphabet
+	// Implementiert Comparable mit lexikal Reihenfolge
+	// (Unicode / Länge), return value  > 0, falls other
+	// früher im Alphabet
 	public int compareTo(String other);
 
 	// String-Darstellung der Werte. b kann sein:
