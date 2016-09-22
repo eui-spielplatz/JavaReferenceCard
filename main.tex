@@ -84,6 +84,16 @@
 	\end{adjustbox}
 }
 
+\newenvironment{fancyboxwide}[2]
+{
+	\begin{adjustbox}{valign=m,center=0.48\textwidth,margin=1ex,minipage=[t][][t]{0.48\textwidth},bgcolor=#1,cfbox=#2 1.5pt 0pt 1pt}
+	\begin{centering}
+}
+{
+	\end{centering}
+	\end{adjustbox}
+}
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -269,16 +279,6 @@ Attribute und statische Attribute werden von Java auf vorgegebenen Standardwerte
 \lstinputlisting{Math.java}
 \end{fancybox}
 
-\begin{fancybox}{pagepurple}{borderpurple}
-\fancyheader{Bubblesort Algorithmus}
-\lstinputlisting{Sortieralgorithmen.java}
-\end{fancybox}
-
-\begin{fancybox}{pagepurple}{borderpurple}
-\fancyheader{Binärsuche Algorithmus}
-\lstinputlisting{Suche.java}
-\end{fancybox}
-
 \begin{fancybox}{pagegreen}{bordergreen}
 \fancyheader{Struktogramm}
 
@@ -293,9 +293,22 @@ Attribute und statische Attribute werden von Java auf vorgegebenen Standardwerte
 		\assign{Tu dies}
 	\ifend
 \end{struktogramm}
-
 \end{fancybox}
 
-
 \end{multicols}
+
+\newpage
+
+\begin{fancyboxwide}{white}{bordergray}
+\fancyheader{Algorithmus: Bubblesort}
+\lstinputlisting{BubbleSort.java}
+\end{fancyboxwide}
+
+\begin{multicols}{2}
+\begin{fancyboxwide}{white}{bordergray}
+\fancyheader{Algorithmus: Binärsuche}
+\lstinputlisting{BinarySearch.java}
+\end{fancyboxwide}
+\end{multicols}
+
 \end{document}
