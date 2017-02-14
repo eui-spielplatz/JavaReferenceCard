@@ -2,3 +2,5 @@
 !*.tex
 !*.java
 !.gitignore
+!README.md
+!main.pdf
